@@ -54,8 +54,9 @@ module load singularity/3.7.1
 `singularity build tile_inpainting.sif docker://phananh1010/tile_inpainting:latest`
 
 #STEP6: load reprequisite modules
-module load hosts/dgx
-module load nvcr.io/nvidia/pytorch/21.05-py3/module
+`module load hosts/dgx`
+
+`module load nvcr.io/nvidia/pytorch/21.05-py3/module`
 
 # Note: after this module is loaded, type nvidia-smi to determine the cuda version to be loaded. In my case, we have CUDA Version: 11.0
 # Then, search for cuda 11 and load into the library
