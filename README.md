@@ -17,7 +17,7 @@ pip3 install torch torchvision torchaudio
 pip3 install opencv-python==4.5.2.54
 pip3 install ipython
   ```
-### STEP 1C: write the list of installed package into a file
+#### STEP 1C: write the list of installed package into a file
 pip freeze > requirements.txt
 
 
