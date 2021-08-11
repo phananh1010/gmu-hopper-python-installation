@@ -93,7 +93,7 @@ NOTE: similar to the previous custome built docker, you should load the docker f
 ```
 ngc registry image info nvcr.io:nvidia/pytorch
 ```
-### STEP 1B: copy the docker to local, convert to .sif file
+#### STEP 1B: copy the docker to local, convert to .sif file
 ```
 singularity build nvidiapytorch_20.12-py3.sif docker://nvcr.io/nvidia/pytorch:20.12-py3
 ```
