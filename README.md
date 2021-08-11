@@ -1,7 +1,7 @@
-# Introduction
+# INTRODUCTION
 Installing developing environment can be a big hassle, especially on third party platform where we do not have root permission. Thus, using tools such as Docker can help facilitate this step. In this file, I note the steps required to create a Docker container, and install it in GMU cloud platform.
 
-# Section I: create custome docker image 
+# SECTION I: create custome docker image 
 ### STEP 0: install docker
 Use this link for reference on how to create a simple Docker image: https://docker-curriculum.com/
 
@@ -52,7 +52,7 @@ In my case is the GMU cloud, the following command is specific to GMU cloud plat
 
 `singularity build [output_image_name].sif docker://[username]/[imagename]:[tag]`
 
-`singularity build tile_inpainting.sif docker://phananh1010/tile-inpainting:latest`
+`singularity build tile-inpainting.sif docker://phananh1010/tile-inpainting:latest`
 
 ### STEP6: load reprequisite modules
 
@@ -82,24 +82,29 @@ NOTE: similar to the previous custome built docker, you should load the docker f
 
 ### STEP 1: load a pre-built docker image to worker node
 #### STEP 1A: find the target docker 
+```
 ngc registry image info nvcr.io:nvidia/pytorch
+```
 ### STEP 1B: copy the docker to local, convert to .sif file
+```
 singularity build nvidiapytorch_20.12-py3.sif docker://nvcr.io/nvidia/pytorch:20.12-py3
-
+```
 ### STEP 2: follow STEP 6 in the previous section to load reprequisite modules
 
 ### STEP 3: run the module in bash mode
+```
 singularity  run ./nvidiapytorchv2_20.12-py3.sif /bin/bash
-nvcr.io/nvidia/pytorch/21.05-py3
+```
 
 
-# SECTION 3: USE BUILT-IN DOCKER IMAGE from HOPPER.ORC CLOUD RESOURCE LIST
+# SECTION 3: USE BUILT-IN DOCKER IMAGE FROM HOPPER.ORC CLOUD RESOURCE LIST
 
 
 ### STEP 1: follow STEP 6 in the section 1, to load reprequisite modules
 ### STEP 2: run the built-in docker module
+```
 singularity run /containers/dgx/Containers/pytorch/pytorch_21.02-py3.sif /bin/bash
-
+```
 Note that for section 2 and section 3, some specialized package is not available, we need to install it everytime the docker is loaded
 ```
 pip install zipfile36
