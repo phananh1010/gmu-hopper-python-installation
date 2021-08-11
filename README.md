@@ -2,20 +2,20 @@
 #SECTION 1: load a custime build docker to GMU HOPPER.ORC cluster#############
 ############################################################################
 
-#STEP 0: install docker
+# STEP 0: install docker
 Use this link for reference on how to create a simple Docker image: https://docker-curriculum.com/
 
-#STEP1: create a virtual environment, then install essential packages to be used
-##STEP 1A: create environment
+# STEP1: create a virtual environment, then install essential packages to be used
+## STEP 1A: create environment
 conda create -n env_<newenv>
 
-##STEP 1B: install packages using PIP (not conda)
+## STEP 1B: install packages using PIP (not conda)
 Command used to install related packages
 conda install python=3
 pip3 install torch torchvision torchaudio
 pip3 install opencv-python==4.5.2.54
 pip3 install ipython
-##STEP 1C: write the list of installed package into a file
+## STEP 1C: write the list of installed package into a file
 pip freeze > requirements.txt
 
 
@@ -61,15 +61,15 @@ singularity run tile_inpainting.sif /bin/bash
 NOTE: similar to the previous custome built docker, you should load the docker from head node, since the connection is very slow
 
 
-#STEP 1: load a pre-built docker image to worker node
-#STEP 1A: find the target docker 
+# STEP 1: load a pre-built docker image to worker node
+# STEP 1A: find the target docker 
 ngc registry image info nvcr.io:nvidia/pytorch
-#STEP 1B: copy the docker to local, convert to .sif file
+# STEP 1B: copy the docker to local, convert to .sif file
 singularity build nvidiapytorch_20.12-py3.sif docker://nvcr.io/nvidia/pytorch:20.12-py3
 
-#STEP 2: follow STEP 6 in the previous section to load reprequisite modules
+# STEP 2: follow STEP 6 in the previous section to load reprequisite modules
 
-#STEP 3: run the module in bash mode
+# STEP 3: run the module in bash mode
 singularity  run ./nvidiapytorchv2_20.12-py3.sif /bin/bash
 nvcr.io/nvidia/pytorch/21.05-py3
 
@@ -77,8 +77,8 @@ nvcr.io/nvidia/pytorch/21.05-py3
 #SECTION 3: USE BUILT-IN DOCKER IMAGE from HOPPER.ORC CLOUD RESOURCE LIST
 #################################################
 
-#STEP 1: follow STEP 6 in the section 1, to load reprequisite modules
-#STEP 2: run the built-in docker module
+# STEP 1: follow STEP 6 in the section 1, to load reprequisite modules
+# STEP 2: run the built-in docker module
 singularity run /containers/dgx/Containers/pytorch/pytorch_21.02-py3.sif /bin/bash
 
 ###########################OTHER NOTES:###########################
