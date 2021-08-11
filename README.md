@@ -70,8 +70,7 @@ salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-01:00:00
 
 `module load nvcr.io/nvidia/pytorch/21.05-py3/module`
 
-# Note: after this module is loaded, type nvidia-smi to determine the cuda version to be loaded. In my case, we have CUDA Version: 11.0
-# Then, search for cuda 11 and load into the library
+##### Note: after this module is loaded, type nvidia-smi to determine the cuda version to be loaded. In my case, we have CUDA Version: 11.0. Then, search for cuda 11 and load into the library
 
 `module -r spider cuda`
 
