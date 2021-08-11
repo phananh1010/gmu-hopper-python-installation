@@ -10,17 +10,21 @@ Use this link for reference on how to create a simple Docker image: https://dock
 conda create -n env_<newenv>
 
 ## STEP 1B: install packages using PIP (not conda)
-Command used to install related packages
+Command used to install related packages:
+  ```
 conda install python=3
 pip3 install torch torchvision torchaudio
 pip3 install opencv-python==4.5.2.54
 pip3 install ipython
+  ```
 ## STEP 1C: write the list of installed package into a file
 pip freeze > requirements.txt
 
 
-#STEP 2: create the image
-##STEP 2A: create Dockerfile, this is a meta file specifying the details about our docker image. The following is the Dockerfile I used to create my interactive python image:
+# STEP 2: create the image
+  
+## STEP 2A: create Dockerfile, this is a meta file specifying the details about our docker image. The following is the Dockerfile I used to create my interactive python image:
+  
 ```
 FROM python:3
 WORKDIR /home/anh2/workspace/test/test-docker
@@ -28,9 +32,11 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 CMD ["python"]
 ```
-###STEP3: after the image is created, check if the container works by run it:
-docker run -it testdocker /bin/bash
-
+### STEP3: after the image is created, check if the container works by run it:
+  ```
+docker build -t phananh1010/tile-inpainting .
+docker run -it phananh1010/tile-inpainting /bin/bash
+  ```
 #STEP4: upload the docker to the docker hub, assuming that a docker account has been created
 following simple instructions from this site: https://learncode24h.com/docker-tutorial-how-to-upload-docker-image-to-public-registry-docker-hub/
 
