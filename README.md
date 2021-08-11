@@ -1,13 +1,13 @@
-##########################################################################
-#SECTION 1: load a custime build docker to GMU HOPPER.ORC cluster#############
-############################################################################
+# Introduction
+Installing developing environment can be a big hassle, especially on third party platform where we do not have root permission. Thus, using tools such as Docker can help facilitate this step. In this file, I note the steps required to create a Docker container, and install it in GMU cloud platform.
+
 
 # STEP 0: install docker
 Use this link for reference on how to create a simple Docker image: https://docker-curriculum.com/
 
 # STEP1: create a virtual environment, then install essential packages to be used
 ## STEP 1A: create environment
-conda create -n env_<newenv>
+conda create -n newenv
 
 ## STEP 1B: install packages using PIP (not conda)
 Command used to install related packages:
