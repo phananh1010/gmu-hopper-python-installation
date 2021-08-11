@@ -35,12 +35,15 @@ docker run -it testdocker /bin/bash
 following simple instructions from this site: https://learncode24h.com/docker-tutorial-how-to-upload-docker-image-to-public-registry-docker-hub/
 
 
-#STEP5: go to the cloud and load the docker image using public url.
+# STEP5: go to the cloud and load the docker image using public url.
 In my case is the GMU cloud, the following command is specific to GMU cloud platform
-##STEP5A: login to head node (you cannot use worker node, since it does not have permission to connect to public site nor write to disk)
-##STEP5B: load the singularity, a library to create/load/run docker container
+  
+## STEP5A: login to head node (you cannot use worker node, since it does not have permission to connect to public site nor write to disk)
+  
+## STEP5B: load the singularity, a library to create/load/run docker container
 module load singularity/3.7.1
-##STEP5C: build sif file from public docker url. the format is singularity build <output_image_name>.sif docker://<username>/<imagename>:<tag>
+  
+## STEP5C: build sif file from public docker url. the format is singularity build <output_image_name>.sif docker://<username>/<imagename>:<tag>
 singularity build tile_inpainting.sif docker://phananh1010/tile_inpainting:latest
 
 #STEP6: load reprequisite modules
