@@ -7,7 +7,9 @@ Use this link for reference on how to create a simple Docker image: https://dock
 
 ### STEP1: create a virtual environment, then install essential packages to be used
 #### STEP 1A: create environment
+```
 conda create -n newenv
+```
 
 #### STEP 1B: install packages using PIP (not conda)
 Command used to install related packages:
