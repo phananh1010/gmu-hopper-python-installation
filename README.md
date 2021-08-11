@@ -98,7 +98,17 @@ nvcr.io/nvidia/pytorch/21.05-py3
 # STEP 2: run the built-in docker module
 singularity run /containers/dgx/Containers/pytorch/pytorch_21.02-py3.sif /bin/bash
 
+Note that for section 2 and section 3, some specialized package is not available, we need to install it everytime the docker is loaded
+```
+pip install zipfile36
+pip install opencv-python-headless
+```
+
 ###########################OTHER NOTES:###########################
+if you see this error relating to opencv:
+ImportError: libGL.so.1: cannot open shared object file: No such file or directory
+Then try this to install opencv-python-headless, not the opencv
+
 prune the containers:
 docker container prune
 
