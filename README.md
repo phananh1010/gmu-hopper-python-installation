@@ -45,6 +45,7 @@ following simple instructions from this site: https://learncode24h.com/docker-tu
 
 ### STEP5: go to the cloud and load the docker image using public url.
 In my case is the GMU cloud, the following command is specific to GMU cloud platform
+
   
 #### STEP5A: login to head node (you cannot use worker node, since it does not have permission to connect to public site nor write to disk)
   
@@ -53,6 +54,13 @@ In my case is the GMU cloud, the following command is specific to GMU cloud plat
 `singularity build [output_image_name].sif docker://[username]/[imagename]:[tag]`
 
 `singularity build tile-inpainting.sif docker://phananh1010/tile-inpainting:latest`
+
+#### STEP5C: request a worker with GPU
+Request a VM with GPU:
+```
+salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-01:00:00
+```
+
 
 ### STEP6: load reprequisite modules
 
