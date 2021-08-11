@@ -64,17 +64,14 @@ salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-01:00:00
 
 ### STEP6: load reprequisite modules
 
-`module load hosts/dgx`
-
-`module load singularity/3.7.1`
-
-`module load nvcr.io/nvidia/pytorch/21.05-py3/module`
-
+```
+module load hosts/dgx
+module load singularity/3.7.1
+module -r spider cuda
+module load cuda/11.2.1
+module load nvcr.io/nvidia/pytorch/21.05-py3/module
+```
 ##### Note: after this module is loaded, type nvidia-smi to determine the cuda version to be loaded. In my case, we have CUDA Version: 11.0. Then, search for cuda 11 and load into the library
-
-`module -r spider cuda`
-
-`module load cuda/11.2.1`
 
 ### STEP7: run the interactive docker container in the cloud, using singularity. To enable interative mode, add /bin/bash to the end
 ```
