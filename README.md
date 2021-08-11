@@ -1,5 +1,5 @@
 # INTRODUCTION
-Installing developing environment can be a big hassle, especially on third party platform where we do not have root permission. Thus, using tools such as Docker can help facilitate this step. In this file, I note the steps required to create a Docker container, and install it in GMU cloud platform.
+Installing developing environment can be a big hassle, especially on third party platform where we do not have root permission. Thus, using tools such as Docker can help facilitate this step. Provided that the Docker or similar framwork such as Singularity is enabled. In this file, I note the steps required to create a Docker container, and install it in GMU cloud platform.
 
 # SECTION I: create custome docker image 
 ### STEP 0: install docker
