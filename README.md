@@ -51,9 +51,11 @@ In my case is the GMU cloud, the following command is specific to GMU cloud plat
   
 #### STEP5B: build sif file from public docker url. the format is:
 
-`singularity build [output_image_name].sif docker://[username]/[imagename]:[tag]`
+```
+singularity build [output_image_name].sif docker://[username]/[imagename]:[tag]
 
-`singularity build tile-inpainting.sif docker://phananh1010/tile-inpainting:latest`
+singularity build tile-inpainting.sif docker://phananh1010/tile-inpainting:latest
+```
 
 #### STEP5C: request a worker with GPU
 Request a VM with GPU:
