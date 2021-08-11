@@ -75,7 +75,7 @@ module load nvcr.io/nvidia/pytorch/21.05-py3/module
 
 ### STEP7: run the interactive docker container in the cloud, using singularity. To enable interative mode, add /bin/bash to the end
 ```
-singularity run tile_inpainting.sif /bin/bash
+singularity run tile-inpainting.sif /bin/bash
 ```
 
 
