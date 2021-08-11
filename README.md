@@ -37,7 +37,7 @@ CMD ["python"]
 docker build -t phananh1010/tile-inpainting .
 docker run -it phananh1010/tile-inpainting /bin/bash
   ```
-#STEP4: upload the docker to the docker hub, assuming that a docker account has been created
+# STEP4: upload the docker to the docker hub, assuming that a docker account has been created
 following simple instructions from this site: https://learncode24h.com/docker-tutorial-how-to-upload-docker-image-to-public-registry-docker-hub/
 
 
@@ -49,8 +49,9 @@ In my case is the GMU cloud, the following command is specific to GMU cloud plat
 ## STEP5B: load the singularity, a library to create/load/run docker container
 module load singularity/3.7.1
   
-## STEP5C: build sif file from public docker url. the format is singularity build <output_image_name>.sif docker://<username>/<imagename>:<tag>
-singularity build tile_inpainting.sif docker://phananh1010/tile_inpainting:latest
+## STEP5C: build sif file from public docker url. the format is:
+`singularity build [output_image_name].sif docker://[username]/[imagename]:[tag]`
+`singularity build tile_inpainting.sif docker://phananh1010/tile_inpainting:latest`
 
 #STEP6: load reprequisite modules
 module load hosts/dgx
