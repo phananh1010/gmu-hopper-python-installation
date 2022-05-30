@@ -1,6 +1,6 @@
 # gmu-hopper-docker
 This is a step by step guide to setup pytorch workplace for GMU cloud cluster. Note: in this setup, you DO NOT need root permission to install almost every python-based program.
-If you want to use Docker, refer to file `DOCKER_TUTORIAL.md`.
+If you want to use Docker, refer to step 5 in file `DOCKER_TUTORIAL.md`
 
 #### Step 1: download and install anaconda
 Download the sh file:
