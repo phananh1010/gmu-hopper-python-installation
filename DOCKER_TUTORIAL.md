@@ -66,7 +66,12 @@ ssh [userid]@@hopper.orc.gmu.edu
 
 Request a VM with GPU:
 ```
-salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-12:00:00
+salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-12:00:00 --mem=24G
+```
+
+Another example:
+```
+salloc -p gpuq -q gpu --gres=gpu:A100.40gb:1 -n 1  --mem=15G
 ```
 
 
