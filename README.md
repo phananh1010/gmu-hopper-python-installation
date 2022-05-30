@@ -58,6 +58,12 @@ singularity build tile-inpainting.sif docker://phananh1010/tile-inpainting:lates
 ```
 
 #### STEP5C: request a worker with GPU
+
+Connect to the head node
+```
+ssh [userid]@@hopper.orc.gmu.edu
+```
+
 Request a VM with GPU:
 ```
 salloc -p gpuq -q gpu --ntasks-per-node=1 --gres=gpu:A100.40gb:1 -t 0-01:00:00
