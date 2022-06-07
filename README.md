@@ -35,6 +35,12 @@ Activate your environment, then install your packages as usual
 conda activate /scratch/anguy59/env_hmd_attack
 ```
 
+Ensure that you are using your environment installed inside /scratch. invoke `ipython` interface, and execute these code:
+```
+import sys
+sys.exec_prefix
+```
+
 #### Step 5: profit
 
 
