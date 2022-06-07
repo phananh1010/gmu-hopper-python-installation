@@ -2,6 +2,13 @@
 This is a step by step guide to setup pytorch workplace for GMU cloud cluster. Note: in this setup, you DO NOT need root permission to install almost every python-based program.
 If you want to use Docker, refer to step 5 in file `DOCKER_TUTORIAL.md`
 
+#### Step 0: request and login to a worker
+You must install conda from a worker. Do not install on head note
+```
+salloc -p gpuq -q gpu --gres=gpu:A100.40gb:1 -n 1  --mem=15G -t 0-12:00:00
+```
+
+
 #### Step 1: download and install anaconda
 Download the sh file:
 ```
