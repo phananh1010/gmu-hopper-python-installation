@@ -37,3 +37,20 @@ conda activate /scratch/anguy59/env_hmd_attack
 
 #### Step 5: profit
 
+
+
+## Fix anaconda error, corrupted yaml package: "AttributeError: module 'ruamel_yaml' has no attribute 'representer'"
+#### Step 1: install pip
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+./python3 get-pip.py --force-reinstall
+```
+
+#### Step 2: force re-install yaml
+```
+ ./pip3 install --upgrade ruamel.yaml --ignore-installed ruamel.yaml
+```
+
+#### Step3: If still doesn't work, remove anaconda using rm -rf, and reinstall conda from scratch
+
+
