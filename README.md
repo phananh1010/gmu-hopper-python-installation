@@ -3,7 +3,7 @@ This is a step by step guide to setup pytorch workplace for GMU cloud cluster. N
 If you want to use Docker, refer to step 5 in file `DOCKER_TUTORIAL.md`
 
 #### Step 0: request and login to a worker
-You must install conda from a worker. Do not install on head note
+You must install conda from a worker. Do not install on head node. The head node is the machine you are connected to right after logging in.
 ```
 salloc -p gpuq -q gpu --gres=gpu:A100.40gb:1 -n 1  --mem=15G -t 0-12:00:00
 ```
