@@ -9,8 +9,7 @@ salloc -p gpuq -q gpu --gres=gpu:A100.40gb:1 -n 1  --mem=15G -t 0-12:00:00
 ```
 The command above assume you are a normal user. To request resource as a contributor, use this command instead:
 ```
-salloc --partition=contrib-gpuq --qos=ksun --gres=gpu:A100.80gb:1 --nodes=1 --ntasks-per-node=12 --
-mem=48G  -t 2-12:00:00
+salloc --partition=contrib-gpuq --qos=ksun --gres=gpu:A100.80gb:1 --nodes=1 --ntasks-per-node=12 --mem=48G  -t 2-12:00:00
 ```
 
 #### Step 1: download and install anaconda
