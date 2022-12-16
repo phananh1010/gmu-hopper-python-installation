@@ -34,7 +34,10 @@ After making sure the system are clean, check error message using `dmesg` comman
                NVRM: components have the same version.
 ```
 
-Try to install the exact version in the system:
+Try to install the exact version in the system. Download `.deb` file, install using `sudo dpckg -i [package]`. Then use this command: 
+```
+sudo apt-get install cuda-drivers
+```
 
 
 
